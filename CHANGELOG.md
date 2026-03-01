@@ -77,6 +77,8 @@ Docs: https://docs.openclaw.ai
 
 ### Fixes
 
+- Cron/One-shot reliability: retry transient one-shot failures with bounded backoff and configurable retry policy before disabling. (#24435) Thanks .
+- Gateway/Cron auditability: add gateway info logs for successful cron create, update, and remove operations. (#25090) Thanks .
 - Cron/Schedule errors: notify users when a job is auto-disabled after repeated schedule computation failures. (#29098) Thanks .
 - Cron/Schedule errors: notify users when a job is auto-disabled after repeated schedule computation failures. (#29098) Thanks .
 - Onboarding/Custom providers: raise default custom-provider model context window to the runtime hard minimum (16k) and auto-heal existing custom model entries below that threshold during reconfiguration, preventing immediate `Model context window too small (4096 tokens)` failures. (#21653) Thanks @r4jiv007.
